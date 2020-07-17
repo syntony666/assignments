@@ -1,0 +1,22 @@
+Introducing "How to solve it CPP"
+Learning to develop object-oriented software can be challenging for three reasons.
+
+First, you are learning features of a new language, in this case, C++. Being a superset of the C language, C++ adds many new features for representing objects, exceptions, name spaces and templates, etc.
+
+Second, you are learning a new way to think about program design where objects and collaborations are the main abstractions. You may not be able to write a object-oriented program even if you learn the features of an object-oriented programming language. In the case of C++, many new language features enable you to use it as a better C, but that does not guarantee object orientation.
+
+Third, you are learning to develop software not just out of curiosity. You do so because you want to able to build useful applications. Since useful applications are usually are somewhat complicated, this will require you to learn good work habits and engineering practices.
+
+I am writing these articles to help you take up the three challenges when you learn C++ for the first time. The articles come in groups that are threaded by a number of long running examples. My preference for long running examples over short examples is that the former sets a context where object orientation and engineering practices really make more sense. That said, isolated, small examples come in handy when you are trying out a new language feature. Many existing textbooks and online resources do a good job covering this aspect. Thus, I am not going to spend time writing about them in these articles.
+
+In these articles, an example always begins with a problem statement and ends with a program that solves the problem. You may ask, then, what makes an example long running? The obvious answer would be that the problem in the example is complicated enough that a conceivable program for solving it will be large in size e.g., when measured in lines of code, or LOC. Real world applications fall into this category. In these articles, there is another category of long running examples ones that are designed to give you opportunities for learning new language features, object orientation, and engineering practices.
+
+Since the examples will be long running, some kind of decomposition of the problem is necessary. Nearly all problems can benefit from decomposition. Let us look at an example.
+
+Problem. Compute the inner product or dot product of two vectors when it is defined.
+
+As a problem it is simple enough if you know what a vector is, but we can still benefit from a decomposition into three sub-problems handling the input, computing the inner product, and displaying the output. In handling the input, you have to decide how the user inputs data i.e., two vectors to your program. Does she type in the input on the command line? Does she react to prompts by your program? Or, does she put the data in a file to be read by your program? To know exactly which option to take, you'll have to ask your user. Then again, always be aware that the user can change her mind. You must also address errors committed by the user such as inputting two vectors of different dimensions, a malformed vector, and so on. Handling the input ensures that inner product is only computed for two well-formed vectors with an identical dimension.
+
+The benefit? You can then organize the code in handling input and computing inner product in separate units, each of which will be easy to understand and modify. Your code for computing an inner product will be clean without the need for checking for malformed vectors. Even better, when the user changes her mind about the way vectors are input, you'll be glad that you have a single place to look for the required change.
+
+With a decomposition into sub-problems, you can now start working on them. You certainly don't want to work on all sub-problems simultaneously, being aware of our cognitive limit and the fact that it defeats the purpose of decomposition. So, a practical way to do it is something like this work on one sub-problem at a time; work on the next sub-problem, and so on, until you're done. In these articles, I am going to frame the problem-solving process after George Pólya's four well-known steps of solving mathematical problems in his classic How To Solve It understanding the problem, devising a plan, carrying out the plan, and looking back.

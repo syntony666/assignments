@@ -1,0 +1,4 @@
+.vscode/
+__pycache__/
+
+# exec test: python3 -m unittest -v [filename]
